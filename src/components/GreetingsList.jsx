@@ -1,4 +1,3 @@
-import React from 'react'
 import GreetingCard from './GreetingCard'
 
 export default function GreetingsList({ greetings = [] }) {

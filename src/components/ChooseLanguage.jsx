@@ -1,4 +1,4 @@
-import { useI18nContext } from "../I18nContext"
+import { useI18nContext } from "../I18nContext";
 
 const LANGUAGE = [
     {value: "he", label: "עברית"},
@@ -6,11 +6,11 @@ const LANGUAGE = [
     {value: "fr", label: "Français"}
 ]
 export default function ChooseLanguage() {
-    const {language, setLanguage} = useI18nContext();
+    const {setLanguage} = useI18nContext();
   return (
     <label>
       <span>בחר שפה: </span>
-      <select value={language} onChange={(e) => setLanguage(e.target.value)}>
+      <select defaultValue="he" onChange={(e) => setLanguage(e.target.value)}>
         {LANGUAGE.map((lang) => (
             <option key={lang.value} value={lang.value}>
             {lang.label}

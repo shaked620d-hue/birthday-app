@@ -2,7 +2,7 @@ import { Provider, useI18nContext } from "./I18nContext";
 import ChooseLanguage from "./components/ChooseLanguage";
 import BirthDate from './components/BirthDate';
 import GreetingsList from './components/GreetingsList';
-
+import "./App.css";
 
 function BirthdayContent() {
   const { language } = useI18nContext();
