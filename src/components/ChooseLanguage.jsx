@@ -6,13 +6,13 @@ const LANGUAGE = [
     {value: "fr", label: "Français"}
 ]
 export default function ChooseLanguage() {
-    const {setLanguage} = useI18nContext();
+    const {language, setLanguage} = useI18nContext();
   return (
     <label>
       <span>בחר שפה: </span>
-      <select defaultValue="he" onChange={(e) => setLanguage(e.target.value)}>
+      <select value={language} onChange={(e) => setLanguage(e.target.value)}>
         {LANGUAGE.map((lang) => (
-            <option key={lang.value} value={lang.value}>\
+            <option key={lang.value} value={lang.value}>
             {lang.label}
             </option>
         ))}
